@@ -1,0 +1,71 @@
+/* Products.css */
+
+.productsWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.productImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+.productDetails {
+  padding: 10px;
+}
+
+h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Style the "Add to Cart" button */
+.btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Full width on small screens */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Style the button on hover */
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Give all buttons the same margin from the bottom side */
+.card .btn {
+  margin-bottom: 10px;
+}
+
+/* Media queries for responsive design */
+
+/* Small devices (phones) */
+@media screen and (max-width: 576px) {
+  .productsWrapper {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+}
